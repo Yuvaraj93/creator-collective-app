@@ -116,19 +116,19 @@ const Home = () => {
               size="lg"
               className={`w-32 h-32 rounded-full jarvis-button relative transition-all duration-500 ${
                 isRecording 
-                  ? 'bg-gradient-to-r from-destructive/40 to-accent/40 pulse-glow' 
-                  : 'bg-gradient-to-r from-primary/40 to-accent/30 hover:scale-110'
+                  ? 'bg-gradient-to-r from-green-500/40 to-green-400/40 pulse-glow border-green-500/50' 
+                  : 'bg-gradient-to-r from-red-500/40 to-red-400/40 hover:scale-110 border-red-500/50'
               }`}
             >
-              <div className={`transition-all duration-300 ${isRecording ? 'animate-pulse' : 'float-animation'}`}>
-                {isRecording ? <MicOff size={40} /> : <Mic size={40} />}
+              <div className={`transition-all duration-300 ${isRecording ? 'animate-pulse text-green-400' : 'float-animation text-red-400'}`}>
+                <Mic size={40} />
               </div>
             </Button>
             
             {/* Concentric circles around button */}
-            <div className={`absolute inset-0 rounded-full border border-primary/30 animate-ping ${isRecording ? 'block' : 'hidden'}`}></div>
-            <div className={`absolute -inset-4 rounded-full border border-primary/20 animate-ping ${isRecording ? 'block' : 'hidden'}`} style={{animationDelay: '0.5s'}}></div>
-            <div className={`absolute -inset-8 rounded-full border border-primary/10 animate-ping ${isRecording ? 'block' : 'hidden'}`} style={{animationDelay: '1s'}}></div>
+            <div className={`absolute inset-0 rounded-full border border-green-500/30 animate-ping ${isRecording ? 'block' : 'hidden'}`}></div>
+            <div className={`absolute -inset-4 rounded-full border border-green-500/20 animate-ping ${isRecording ? 'block' : 'hidden'}`} style={{animationDelay: '0.5s'}}></div>
+            <div className={`absolute -inset-8 rounded-full border border-green-500/10 animate-ping ${isRecording ? 'block' : 'hidden'}`} style={{animationDelay: '1s'}}></div>
           </div>
         </div>
 
